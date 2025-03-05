@@ -1,0 +1,158 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to the whole body */
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poopins' sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #526D82, #9DB2BF);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #27374D;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app i{
+    width: 30px;
+    margin-left:10px;
+    float: right;
+    text-align: center;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px; /* Reduce padding */
+    font-size: 14px; /* Make text smaller */
+    width: 80%; /* Adjust width if necessary */
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 22px; /* Increased for smoother edges */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; /* Smoother transitions */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #526D82;
+}
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    font-size: 2em;
+    color: white;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 22px;
+    transition-duration: .3s;
+  }
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 20px;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px ,2px);
+}
+
+/*check list*/
+ul li {
+    color: white;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: url('images/unchecked.png'); /* Make sure the path is correct */
+    background-size: cover; /* Ensure the image fills the area */
+    background-position: center; /* Center the image */
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #b3b1b1;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url('images/checked.png');
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #b3b1b1;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+}
